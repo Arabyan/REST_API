@@ -9,6 +9,9 @@ from .models import Update
     # return HttpResponse(get_template().render({}))
 
 def update_model_detaiL_view(request):
+    """
+    URI - for a REST API
+    """
     data = {
         "count": 1000,
         "content":"Some new content"
