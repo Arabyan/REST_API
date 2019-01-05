@@ -1,6 +1,10 @@
+import json
+
 from django.shortcuts import render
 from django.http import JsonResponse, HttpResponse
-import json
+from django.views.generic import View
+
+from grgapi.mixins import JsonResponseMixin
 
 from .models import Update
 
@@ -20,3 +24,23 @@ def json_example_view(request):
     json_data = json.dumps(data)
     # return JsonResponse(data)
     return HttpResponse(json_data, content_type='application/json')
+
+class JsonCBV(View):
+    def get(self, request, *args, **kwargs):
+        data = {
+            "count": 1000,
+            "content": "Some new content"
+        }
+
+        # return JsonResponse(data)
+        return JsonResponse(data)
+
+
+class JsonCBV2(JsonResponseMixin, View):
+    def get(self, request, *args, **kwargs):
+        data = {
+            "count": 1000,
+            "content": "Some new content"
+        }
+
+        return self.render_to_json_response(data)
