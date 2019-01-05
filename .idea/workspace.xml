@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="69d15a3f-6292-4833-abcf-ddc2cc0add99" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/grgapi/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/grgapi/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/updates/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/updates/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/updates/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/updates/views.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -50,8 +48,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/updates/models.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="15">
-              <caret line="15" column="2" selection-start-line="15" selection-start-column="2" selection-end-line="21" selection-end-column="40" />
+            <state relative-caret-position="51">
+              <caret line="47" column="19" selection-start-line="47" selection-start-column="19" selection-end-line="47" selection-end-column="19" />
               <folding>
                 <element signature="e#0#45#0" expanded="true" />
               </folding>
@@ -103,8 +101,8 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="767" />
-    <option name="y" value="71" />
+    <option name="x" value="625" />
+    <option name="y" value="87" />
     <option name="width" value="955" />
     <option name="height" value="564" />
   </component>
@@ -164,11 +162,11 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="767" y="71" width="955" height="564" extended-state="0" />
+    <frame x="788" y="156" width="955" height="564" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.59516615" visible="true" weight="0.21351932" />
-      <window_info id="Structure" order="1" sideWeight="0.40483382" side_tool="true" visible="true" weight="0.21351932" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.59516615" visible="true" weight="0.13841201" />
+      <window_info id="Structure" order="1" sideWeight="0.40483382" side_tool="true" visible="true" weight="0.13841201" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
@@ -233,8 +231,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/updates/models.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="15" column="2" selection-start-line="15" selection-start-column="2" selection-end-line="21" selection-end-column="40" />
+        <state relative-caret-position="51">
+          <caret line="47" column="19" selection-start-line="47" selection-start-column="19" selection-end-line="47" selection-end-column="19" />
           <folding>
             <element signature="e#0#45#0" expanded="true" />
           </folding>
