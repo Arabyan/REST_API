@@ -29,7 +29,7 @@ urlpatterns = [
 
     url(r'^json/cbv2/$', JsonCBV2.as_view()),
     url(r'^json/example/$', json_example_view),
-    url(r'^json/serialized/detail/$', SerializedListlView.as_view()),
-    url(r'^json/serialized/list/$', SerializedDetailView.as_view()),
+    url(r'^json/serialized/detail/$', SerializedDetailView.as_view()),
+    url(r'^json/serialized/list/$', SerializedListlView.as_view()),
 
 ]
