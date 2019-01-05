@@ -8,6 +8,8 @@ from grgapi.mixins import JsonResponseMixin
 
 from .models import Update
 
+
+# obj = Update.objects.get(id=1)
 # def detaiL_view(request):
     # return render(request, template, {}) # render JSon data --> JS object Notation
     # return HttpResponse(get_template().render({}))
