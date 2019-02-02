@@ -1,10 +1,9 @@
-from status.models import Status
 from django.utils.six import BytesIO
 from rest_framework.renderers import JSONRenderer
 from rest_framework.parsers import JSONParser
 
 from status.api.serializers import StatusSerializer
-
+from status.models import Status
 
 """
 Serialize a Single object
@@ -38,12 +37,36 @@ print(data2)
 """
 Create obj 
 """
+data = {'user':1}
+serializer = StatusSerializer(data=data)
+serializer.is_valid()
+serializer.save()
+#
+# if serializer.is_valid():
+#     serializer.save()
 
 """
 Update obj 
 """
-
+obj = Status.objects.first()
+data = {'content':'some new content', "user":1}
+update_serializer = StatusSerializer(obj, data=data)
+update_serializer.is_valid()
+update_serializer.save()
 
 """
 Delete obj
 """
+obj = Status.objects.first()
+data = {'user':1, 'content':'please delete me'}
+create_obj_serializer = StatusSerializer(data=data)
+create_obj_serializer.is_valid()
+create_obj = create_obj_serializer.save() # instance of the objects
+print(create_obj)
+
+# data = {'id':9}
+obj = Status.objects.last()
+get_data_serializer = StatusSerializer(obj)
+# update_serializer.is_valid()
+# update_serializer.save()
+print(obj.delete())
