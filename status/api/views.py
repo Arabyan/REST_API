@@ -51,12 +51,26 @@ class StatusDetailAPIView(generics.RetrieveAPIView):
     authentication_classes  = []
     queryset                = Status.objects.all()
     serializer_class        = StatusSerializer
-    lookup_field            = 'id'
+    # lookup_field            = 'id'
 
-    # def get_object(self, *args, **kwargs):
+   # def get_object(self, *args, **kwargs):
     #     kwargs = self.kwargs
     #     kw_id = kwargs.get('abc')
     #     return Status.objects.get(id=kw_id)
+
+class StatusUpdateAPIView(generics.UpdateAPIView):
+    permission_classes = []
+    authentication_classes = []
+    queryset = Status.objects.all()
+    serializer_class = StatusSerializer
+
+
+
+class StatusDeleteAPIView(generics.DestroyAPIView):
+    permission_classes = []
+    authentication_classes = []
+    queryset = Status.objects.all()
+    serializer_class = StatusSerializer
 
 
 # class StatusCreateView(createView):
