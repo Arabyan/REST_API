@@ -1,4 +1,4 @@
-from rest_framework import generics
+from rest_framework import generics, mixins
 # from rest_framework.generics import List
 from rest_framework.views import APIView
 from rest_framework.response import Response
@@ -6,6 +6,7 @@ from rest_framework.response import Response
 
 from status.models import Status
 from .serializers import StatusSerializer
+
 
 class StatusListSearchAPIView(APIView):
     permission_classes = []
@@ -21,8 +22,10 @@ class StatusListSearchAPIView(APIView):
         serializer = StatusSerializer(qs, many=True)
         return Response(serializer.data)
 
+# CreateModelMixin---post data
+# UpdateModelMixin ---put data
 
-class StatusAPIView(generics.ListAPIView):
+class StatusAPIView(mixins.CreateModelMixin,generics.ListAPIView):
     permission_classes = []
     authentication_classes = []
 
@@ -35,12 +38,10 @@ class StatusAPIView(generics.ListAPIView):
             qs = qs.filter(content__icontains=query)
         return qs
 
+    def post(self, request, *args, **kwargs):
+        return self.create(request, *args, **kwargs)
 
-class StatusCreateAPIView(generics.CreateAPIView):
-    permission_classes      = []
-    authentication_classes  = []
-    queryset                = Status.objects.all()
-    serializer_class        = StatusSerializer
+
 
     # def perform_create(self, serializer):
     #     serializer.save(user=self.request.user)
